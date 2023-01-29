@@ -1,5 +1,6 @@
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
@@ -37,16 +38,30 @@ public class HomePage {
         password.sendKeys("Hazem@1230.");
         login.click();
 
-        driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
-
-
 
     }
+    @Test
+    public void VerifyTheLogoIsDisplayed(){
+        WebElement logo = HomePOM.Logo();
 
-//    @AfterClass
-//    public void tearDown(){
-//        driver.quit();
-//    }
+        Boolean ImagePresent = (Boolean) ((JavascriptExecutor)driver).executeScript("return arguments[0].complete && typeof arguments[0].naturalWidth != \"undefined\" && arguments[0].naturalWidth > 0", logo);
+        if (!ImagePresent)
+        {
+            System.out.println("Image not displayed.");
+        }
+        else
+        {
+            System.out.println("Image displayed.");
+        }
+
+//        Assert.assertTrue(logo.isDisplayed());
+    }
+
+
+    @AfterClass
+    public void tearDown(){
+        driver.quit();
+    }
 
 
 }
