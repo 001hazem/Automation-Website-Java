@@ -7,6 +7,8 @@ import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
+
+import javax.swing.*;
 import java.util.concurrent.TimeUnit;
 public class HomePage {
     protected static ChromeDriver driver;
@@ -17,30 +19,19 @@ public class HomePage {
 //        ChromeOptions options = new BrowserOptions().getOptions(true);
         WebDriverManager.chromedriver().setup();
         driver =  new ChromeDriver();
+
         driver.manage().window().maximize();
         driver.get("https://sgs.dcetest.com/en");
     }
-    @Test
-        public void VerifyTheButtonIsFUNCTIONALITY(){
-        WebElement ButtonSign_In= HomePOM.Button_Is_Clickable();
-        Assert.assertTrue(ButtonSign_In.isDisplayed());
-        ButtonSign_In.click();
-
+    @Test(priority = 1)
+    public void VerifyTheTitleIsCorrect(){
+        String expectedResult="Saudi Geological Survey - SGS";
+        String ActualResult=driver.getTitle();
+        System.out.println("The title is "+ActualResult);
+        Assert.assertEquals(ActualResult,expectedResult);
     }
 
-
-    @Test
-    public void VerifyTheSignIn(){
-        WebElement userName = driver.findElementById("email");
-        WebElement password=driver.findElementById("password");
-        WebElement login = driver.findElementById("btn_submit");
-        userName.sendKeys("hazemkhamis001@gmail.com");
-        password.sendKeys("Hazem@1230.");
-        login.click();
-
-
-    }
-    @Test
+    @Test(priority = 2)
     public void VerifyTheLogoIsDisplayed(){
         WebElement logo = HomePOM.Logo();
 
@@ -57,6 +48,23 @@ public class HomePage {
 //        Assert.assertTrue(logo.isDisplayed());
     }
 
+
+    @Test(priority = 3)
+        public void VerifyTheButtonIsFUNCTIONALITY(){
+        WebElement ButtonSign_In= HomePOM.Button_Is_Clickable();
+        Assert.assertTrue(ButtonSign_In.isDisplayed());
+        ButtonSign_In.click();
+    }
+
+    @Test(priority = 4)
+    public void VerifyTheSignIn(){
+        WebElement userName = driver.findElementById("email");
+        WebElement password=driver.findElementById("password");
+        WebElement login = driver.findElementById("btn_submit");
+        userName.sendKeys("hazemkhamis001@gmail.com");
+        password.sendKeys("Hazem@1230.");
+        login.click();
+    }
 
     @AfterClass
     public void tearDown(){

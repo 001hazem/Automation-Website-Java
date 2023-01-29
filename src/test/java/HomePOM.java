@@ -11,4 +11,8 @@ public class HomePOM {
         return HomePage.driver.findElement(By.xpath("/html/body/div[1]/div[1]/div/h1/a/img"));
     }
 
+    static public WebElement CheckTitle(){
+        return HomePage.driver.findElement(By.xpath("/html/body/div[1]/div[1]/div/h1/a/img"));
+    }
+
 }

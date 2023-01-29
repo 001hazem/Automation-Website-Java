@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2cbfb47d-9070-41c8-ac73-6cdee2727080" name="Changes" comment="Login">
+    <list default="true" id="2cbfb47d-9070-41c8-ac73-6cdee2727080" name="Changes" comment="Add Verify The Logo">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/HomePOM.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/HomePOM.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/HomePage.java" afterDir="false" />
@@ -53,7 +53,7 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager" selected="TestNG.HomePage.VerifyTheLogoIsDisplayed">
+  <component name="RunManager" selected="TestNG.HomePage">
     <configuration name="HomePage" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="SGSAutmated" />
       <option name="PACKAGE_NAME" value="" />
@@ -89,6 +89,18 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="HomePage.VerifyTheTitleIsCorrect" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="SGSAutmated" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="HomePage" />
+      <option name="METHOD_NAME" value="VerifyTheTitleIsCorrect" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="HomePage.test" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="SGSAutmated" />
       <option name="PACKAGE_NAME" value="" />
@@ -103,8 +115,9 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.HomePage.VerifyTheLogoIsDisplayed" />
         <item itemvalue="TestNG.HomePage" />
+        <item itemvalue="TestNG.HomePage.VerifyTheTitleIsCorrect" />
+        <item itemvalue="TestNG.HomePage.VerifyTheLogoIsDisplayed" />
         <item itemvalue="TestNG.HomePage.VerifyLoginWithValidData" />
         <item itemvalue="TestNG.HomePage.test" />
       </list>
@@ -119,7 +132,7 @@
       <option name="presentableId" value="Default" />
       <updated>1674929411261</updated>
       <workItem from="1674929412851" duration="6653000" />
-      <workItem from="1674979803625" duration="885000" />
+      <workItem from="1674979803625" duration="2446000" />
     </task>
     <task id="LOCAL-00001" summary="Login">
       <created>1674941871211</created>
@@ -128,7 +141,14 @@
       <option name="project" value="LOCAL" />
       <updated>1674941871211</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Add Verify The Logo">
+      <created>1674980809453</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1674980809453</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -136,6 +156,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Login" />
-    <option name="LAST_COMMIT_MESSAGE" value="Login" />
+    <MESSAGE value="Add Verify The Logo" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add Verify The Logo" />
   </component>
 </project>
